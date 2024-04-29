@@ -69,6 +69,7 @@ License
 This project is licensed under the MIT License.
 
 
-In the "Image Sections" part, you can replace `/images/homepage.png`, `/images/rental-form.png`, and `/images/map.png` with the paths to your images and add descriptions for each section. Make sure to place your images in a folder named `images` within your project directory. 
+mail for setup: 
 
-Feel free to further customize this README.md file according to your project's specific features, technologies, and requirements. Once you've updated the README.md file, commit the changes and push them to your GitHub repository. This will provide comprehensive instructions and information about your Bike Rental System project, including spaces for your images.
+tushattak17@gmail.com
+jansh7784@gmail.com
