@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Car2Go Car Rentals</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Car Rental in Potheri" name="keywords">
+    <meta content="Best Car Rental Service in Potheri, Chennai" name="description">
+
+    <!-- Favicon -->
+    <link href="car2go.jpeg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
+        <div class="row">
+            <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body pr-3" href=""><i class="fa fa-phone-alt mr-2"></i>+91 9043054267</a>
+                    <span class="text-body">|</span>
+                    <a class="text-body px-3" href=""><i class="fa fa-envelope mr-2"></i>car2go.potheri@gmail.com</a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body px-3" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-body px-3" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-body px-3" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-body px-3" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-body pl-3" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="position-relative px-lg-5" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="text-uppercase text-primary mb-1">Car2Go</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
+                        <a href="about.html" class="nav-item nav-link active">About</a>
+                        <a href="#service" class="nav-item nav-link">Service</a>
+                        <a href="#cars" class="nav-item nav-link">Our Cars</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Search Start -->
+    <div class="container-fluid bg-white pt-3 px-lg-5">
+        <div class="row mx-n2">
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <div class="date mb-3" id="date" data-target-input="nearest">
+                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date"
+                        data-target="#date" data-toggle="datetimepicker" />
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <div class="time mb-3" id="time" data-target-input="nearest">
+                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Time"
+                        data-target="#time" data-toggle="datetimepicker" />
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <div class="date mb-3" id="date" data-target-input="nearest">
+                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Drop Date"
+                        data-target="#date" data-toggle="datetimepicker" />
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <div class="time mb-3" id="time" data-target-input="nearest">
+                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Drop Time"
+                        data-target="#time" data-toggle="datetimepicker" />
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <select class="custom-select px-4 mb-3" style="height: 50px;">
+                    <option selected>Select A Car</option>
+                    <option value="1">Maruti Ertiga - 7+1 seater</option>
+                    <option value="1">Maruti XL6 - 7+1 seater</option>
+                    <option value="1">Tata Hexa - 7+1 seater</option>
+                    <option value="1">Mahindra XUV 500 - 7+1 seater</option>
+                    <option value="1">Toyota Innova - 7+1 seater</option>
+                    <option value="1">Maruti Suzuki Baleno - 5 seater</option>
+                    <option value="1">Maruti Eeco - 5 seater</option>
+                    <option value="1">Maruti Ignis - 5 seater</option>
+                    <option value="1">Tata Nexon - 5 seater</option>
+                    <option value="1">Ford Figo - 5 seater</option>
+                    <option value="1">Hyundai Exter - 5 seater</option>
+                </select>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+                <button class="btn btn-primary btn-block mb-3" type="submit" style="height: 50px;">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- Search End -->
+
+
+
+
+
+
+
+ <!-- About Start -->
+ <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/banner-left.png" style="object-fit: cover;" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <h6 class="text-primary">About Us</h6>
+                    <h1 class="mb-4">Our Mission and Vision</h1>
+                    <p>
+                        Mission and Vision:
+                        CAR2GO is on a mission to revolutionize the transportation experience, offering top-notch car rental and bike rental services designed for client flexibility and stress-free journeys. We go beyond the conventional, serving as a reliable transport solution for both personal and corporate needs. Our commitment extends to exceeding client expectations, fostering lasting relationships, and building a robust customer base. In striving for an honest, collaborative approach based on ethics and reliability, our vision is to emerge as the most reliable and passionately referred car hiring agency in the transportation industry. We envision a future where CAR2GO sets the standard for excellence, providing sustainable, accessible, and inclusive travel solutions for years to come.</p>
+                    <p><i class="fa fa-check-circle text-primary me-3"></i>Providing top-notch car and bike rentals.</p>
+                    <p><i class="fa fa-check-circle text-primary me-3"></i>Stress-free solutions for diverse needs.</p>
+                    <p><i class="fa fa-check-circle text-primary me-3"></i>Vision to be the industry's best.</p>
+                    <a href="about.html" class="btn btn-primary rounded-pill py-3 px-5 mt-3">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h6 class="text-primary">Our Services</h6>
+            <h1 class="mb-4">We Provide a Variety of Serivces</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/img-600x400-1.jpg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-car fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Car Rentals</h4>
+                        <p> We provide specialized consulting services for PV solar systems.</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/solar%202.jpeg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-taxi fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Corporate Rentals</h4>
+                        <p>Our team of experts offers engineering solutions that optimize the design and performance of solar plants.</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/solar%203.jpeg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-building fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Business Travel</h4>
+                        <p>Our due-diligence services ensure that your solar project is compliant with industry standards and regulations.</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/solar%204.jpeg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-road fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Airport Pickup and Drop</h4>
+                        <p>We provide construction monitoring services to ensure that your solar plant is built to the highest standards.</p>
+                        <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/solar%201.jpeg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-graduation-cap fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Weddings</h4>
+                        <p> We offer performance testing services to ensure that your solar plant is performing as intended.</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/img-600x400-6.jpg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-user-check fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Cab Services </h4>
+                        <p>Our experts provide in-depth analysis of your solar plant's performance to help optimize energy generation and increase revenue.</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Feature Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container feature px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="p-lg-5 ps-lg-0">
+                    <h6 class="text-primary">Why Choose Us!</h6>
+                    <h1 class="mb-4">We are the best in the business</h1>
+                    <p class="mb-4 pb-2">We base our relationship on the core values of Trust ,Quality and Integrity. We are committed to
+                        attaining one hundred percent customer satisfaction by offering superior customer friendly services.
+                        Our cars are all newly bought and regularly checked to guarantee maximum safety. Our cars are
+                        supplied of every comfort to allow a relaxing and pleasant trip. Car 2 Go for all types of request, from
+                        elegant and pleasant cars from 5 to 7 seats for long and short TRIPS.
+                        Here at Car 2 Go we take pride in connecting people during their important events in life. After all,
+                        people don’t just rent vehicles for transportation but also a means for accomplishing major tasks like
+                        moving to a new house or office, attend special events like weddings, birthdays, making your guests feel
+                        comfortable or to simply enjoy quality time with loved ones.</p>
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <!-- <div class="btn-lg-square bg-primary rounded-circle">
+                                    <i class="fa fa-check text-white"></i>
+                                </div> -->
+                                <div class="ms-4">
+                                    <p class="mb-0">Quality</p>
+                                    <h5 class="mb-0">Services</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <!-- <div class="btn-lg-square bg-primary rounded-circle">
+                                    <i class="fa fa-user-check text-white"></i>
+                                </div> -->
+                                <div class="ms-4">
+                                    <p class="mb-0">Expert</p>
+                                    <h5 class="mb-0">Workers</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <!-- <div class="btn-lg-square bg-primary rounded-circle">
+                                    <i class="fa fa-drafting-compass text-white"></i>
+                                </div> -->
+                                <div class="ms-4">
+                                    <p class="mb-0">Successful</p>
+                                    <h5 class="mb-0">Delivery</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <!-- <div class="btn-lg-square bg-primary rounded-circle">
+                                    <i class="fa fa-headphones text-white"></i>
+                                </div> -->
+                                <div class="ms-4">
+                                    <p class="mb-0">Customer</p>
+                                    <h5 class="mb-0">Support</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/banner-right.png" style="object-fit: cover;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>Shivahari Illam, Bagavathy Street, Potheri, Vivekananda Nagar, Tamil Nadu 603203</p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>+91 9043054267</p>
+                <p><i class="fa fa-envelope text-white mr-3"></i>car2go.potheri@gmail.com</p>
+                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Usefull Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
+                    <a class="text-body" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Car Gallery</h4>
+                <div class="row mx-n1">
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/baleno.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/ertiga.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/exter.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/xuv500.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/hexa.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/ola.png" alt=""></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Contact Developer</h4>
+                <p class="mb-4">If there are any development issues or queries you can contact the developer below:</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i><a href="https://shivanshdengla.github.io/">shivanshdengla.github.io</a></p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>+91 9043054267</p>
+                <p><i class="fa fa-envelope text-white mr-3"></i>shivanshdengla@gmail.com</p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
+        <p class="mb-2 text-center text-body">&copy; <a href="#">Car2Go</a>. All Rights Reserved.</p>
+		
+		<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->					
+        <p class="m-0 text-center text-body">Developed by <a href="https://shivanshdengla.github.io/">Shivansh Dengla</a></p>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

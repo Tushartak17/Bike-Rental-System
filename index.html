@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .logo-img {
+            max-height: 80px; /* Adjust the max-height as needed */
+        }
+    </style>
+    
+    <meta charset="utf-8">
+    <title>Car2Go Car Rentals</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Car Rental in Potheri" name="keywords">
+    <meta content="Best Car Rental Service in Potheri, Chennai" name="description">
+
+    <!-- Favicon -->
+    <link href="car2go.jpeg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
+        <div class="row">
+            <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body pr-3" href=""><i class="fa fa-phone-alt mr-2"></i>+91 9043054267</a>
+                    <span class="text-body">|</span>
+                    <a class="text-body px-3" href=""><i class="fa fa-envelope mr-2"></i>car2go.potheri@gmail.com</a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body px-3" href="https://www.facebook.com/profile.php?id=61555666516975">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- <a class="text-body px-3" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-body px-3" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a> -->
+                    <a class="text-body px-3" href="https://www.instagram.com/car2go.potheri/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- <a class="text-body pl-3" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="position-relative px-lg-5" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <img src="car2go.png" alt="Car2Go Logo" class="img-fluid logo-img">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#service" class="nav-item nav-link">Service</a>
+                        <a href="#cars" class="nav-item nav-link">Our Cars</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+    </div>
+    
+    <!-- Navbar End -->
+
+
+   <!-- Search Start -->
+<form name="submit-to-google-sheet" id="carSearchForm" class="container-fluid bg-white pt-3 px-lg-5">
+    <div class="row mx-n2">
+        
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <input name="Name" type="text" class="form-control p-4" placeholder="Name" />
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <input name="PhoneNumber" type="text" class="form-control p-4" placeholder="Phone Number" />
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <div class="date mb-3" id="pickupDate" data-target-input="nearest">
+                <input name="PickupDate" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date"
+                    data-target="#pickupDate" data-toggle="datetimepicker" />
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <div class="time mb-3" id="pickupTime" data-target-input="nearest">
+                <input name="PickupTime" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Time"
+                    data-target="#pickupTime" data-toggle="datetimepicker" />
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <div class="date mb-3" id="dropDate" data-target-input="nearest">
+                <input name="DropDate" type="text" class="form-control p-4 datetimepicker-input" placeholder="Drop Date"
+                    data-target="#dropDate" data-toggle="datetimepicker" />
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <div class="time mb-3" id="dropTime" data-target-input="nearest">
+                <input name="DropTime" type="text" class="form-control p-4 datetimepicker-input" placeholder="Drop Time"
+                    data-target="#dropTime" data-toggle="datetimepicker" />
+            </div>
+        </div>
+        
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <select id="carDropdown" name="SelectedCars" class="custom-select px-4 mb-3" style="height: 50px;">
+                <option selected>Select A Car</option>
+                <option value="1">Maruti Ertiga - 7+1 seater</option>
+                <option value="2">Maruti XL6 - 7+1 seater</option>
+                <option value="3">Tata Hexa - 7+1 seater</option>
+                <option value="4">Mahindra XUV 500 - 7+1 seater</option>
+                <option value="5">Toyota Innova - 7+1 seater</option>
+                <option value="6">Maruti Suzuki Baleno - 5 seater</option>
+                <option value="7">Maruti Eeco - 5 seater</option>
+                <option value="8">Maruti Ignis - 5 seater</option>
+                <option value="9">Tata Nexon - 5 seater</option>
+                <option value="10">Ford Figo - 5 seater</option>
+                <option value="11">Hyundai Exter - 5 seater</option>
+                <option value="11">MAruti Swift - 5 seater</option>
+                <option value="11">Tata Alteros</option>
+                <option value="11">Renault Kwid</option>
+                <option value="11">Maruti Celerio</option>
+                <option value="11">Nissan Maginte</option>
+                <option value="11">Jupiter 125</option>
+                <option value="11">Honda Activa</option>
+                <option value="11">Ola Elecetric Bike</option>
+                <option value="11">Royal Enfield</option>
+                <option value="11">Yamaha R15</option>
+                <option value="11">KTM Duke 200</option>
+
+            </select>
+        </div>
+        
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <input id="selectedCarInput" type="text" name="SelectedCar" class="form-control p-4" placeholder="Selected Car" readonly>
+        </div>
+        
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <button id="submitBtn" class="btn btn-primary btn-block mb-3" type="submit" style="height: 50px;">Book Now</button>
+        </div>
+    </div>
+</form>
+<!-- Search End -->
+
+
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0" style="margin-bottom: 90px;">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Rent A Car</h4>
+                            <h1 class="display-1 text-white mb-md-4">Best Rental Cars In Your Location</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Reserve Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Rent A Car</h4>
+                            <h1 class="display-1 text-white mb-md-4">Quality Cars with Unlimited Miles</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Reserve Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n2"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n2"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div id="about">
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <h1 class="display-1 text-primary text-center">01</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Welcome To <span class="text-primary">Cars 2 Go</span></h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <img class="w-75 mb-4" src="img/about.png" alt="">
+                    <p>Welcome to Car2Go, your go-to rental service in Pitheri for convenient and flexible transportation solutions. Whether you need a car for a day trip, a weekend getaway, or a scooty for navigating the city streets, Car2Go has you covered..</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-4 mb-2">
+                    <div class="d-flex align-items-center bg-light p-4 mb-4" style="height: 150px;">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
+                            <i class="fa fa-2x fa-headset text-secondary"></i>
+                        </div>
+                        <h4 class="text-uppercase m-0">24/7 Car Rental Support</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-2">
+                    <div class="d-flex align-items-center bg-secondary p-4 mb-4" style="height: 150px;">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
+                            <i class="fa fa-2x fa-car text-secondary"></i>
+                        </div>
+                        <h4 class="text-light text-uppercase m-0">Car Reservation Anytime</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-2">
+                    <div class="d-flex align-items-center bg-light p-4 mb-4" style="height: 150px;">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
+                            <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
+                        </div>
+                        <h4 class="text-uppercase m-0">Lots Of Pickup Locations</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Banner Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row mx-0">
+                <!-- Left Section for Car2go 40% Program -->
+                <div class="col-lg-6 px-0">
+                    <div class="px-5 bg-secondary d-flex align-items-center justify-content-between" style="height: 350px;">
+                        <img class="img-fluid flex-shrink-0 ml-n5 w-50 mr-4" src="img/banner-left.png" alt="">
+                        <div class="text-right">
+                            <h3 class="text-uppercase text-light mb-3">Earn with Car2go</h3>
+                            <p class="mb-4">List your car and start earning today!</p>
+                            <p class="mb-3">How it works:</p>
+                            <ul class="text-light">
+                                <li>List your car with Car2go.</li>
+                                <li>Customers can rent your car.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Right Section for Car2go 40% Program -->
+                <div class="col-lg-6 px-0">
+                    <div class="px-5 bg-dark d-flex align-items-center justify-content-between" style="height: 350px;">
+                        <div class="text-left">
+                            <h3 class="text-uppercase text-light mb-3">Earn with Car2go</h3>
+                            <ul class="text-light">
+                                <li>Pay a commission of 40% on sales values to Car2go.</li>
+                                <li>Start earning money hassle-free!</li>
+                            </ul>
+                            <p class="mt-3">Take advantage of the opportunity to earn with Car2go and contribute to our community.</p>
+                        </div>
+                        <img class="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="img/banner-right.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Banner End -->
+
+
+
+    <!-- About Start -->
+ <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/banner-left.png" style="object-fit: cover;" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <h6 class="text-primary">About Us</h6>
+                    <h1 class="mb-4">Our Mission and Vision</h1>
+                    <p>
+                        Mission and Vision:
+                        CAR2GO is on a mission to revolutionize the transportation experience, offering top-notch car rental and bike rental services designed for client flexibility and stress-free journeys. We go beyond the conventional, serving as a reliable transport solution for both personal and corporate needs. Our commitment extends to exceeding client expectations, fostering lasting relationships, and building a robust customer base. In striving for an honest, collaborative approach based on ethics and reliability, our vision is to emerge as the most reliable and passionately referred car hiring agency in the transportation industry. We envision a future where CAR2GO sets the standard for excellence, providing sustainable, accessible, and inclusive travel solutions for years to come.</p>
+                    <p><i class="fa fa-check-circle text-primary me-3"></i>Providing top-notch car and bike rentals.</p>
+                    <p><i class="fa fa-check-circle text-primary me-3"></i>Stress-free solutions for diverse needs.</p>
+                    <p><i class="fa fa-check-circle text-primary me-3"></i>Vision to be the industry's best.</p>
+                    <a href="about.html" class="btn btn-primary rounded-pill py-3 px-5 mt-3">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h6 class="text-primary">Our Services</h6>
+            <h1 class="mb-4">We Provide a Variety of Serivces</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/img-600x400-1.jpg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-car fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Car Rentals</h4>
+                        <p> We provide excellent car rental services..</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/solar%202.jpeg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-taxi fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Corporate Rentals</h4>
+                        <p>We also provide Corporate Rental Services catering to your needs.</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/solar%203.jpeg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-building fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Business Travel</h4>
+                        <p>We Offer Business Travel Packages.</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/solar%204.jpeg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-road fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Airport Pickup and Drop</h4>
+                        <p>Standard Airport Pickup and Dropoff Services also available.</p>
+                        <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/solar%201.jpeg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-graduation-cap fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Weddings</h4>
+                        <p>We provide car rentals for weddings as well.</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item rounded overflow-hidden">
+                    <img class="img-fluid" src="img/img-600x400-6.jpg" alt="">
+                    <div class="position-relative p-4 pt-0">
+                        <div class="service-icon">
+                            <i class="fa fa-user-check fa-3x"></i>
+                        </div>
+                        <h4 class="mb-3">Cab Services </h4>
+                        <p>We have a team of drives for your ease.</p>
+                         <!--<a class="small fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Feature Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container feature px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="p-lg-5 ps-lg-0">
+                    <h6 class="text-primary">Why Choose Us!</h6>
+                    <h1 class="mb-4">We are the best in the business</h1>
+                    <p class="mb-4 pb-2">We base our relationship on the core values of Trust ,Quality and Integrity. We are committed to
+                        attaining one hundred percent customer satisfaction by offering superior customer friendly services.
+                        Our cars are all newly bought and regularly checked to guarantee maximum safety. Our cars are
+                        supplied of every comfort to allow a relaxing and pleasant trip. Car 2 Go for all types of request, from
+                        elegant and pleasant cars from 5 to 7 seats for long and short TRIPS.
+                        Here at Car 2 Go we take pride in connecting people during their important events in life. After all,
+                        people don’t just rent vehicles for transportation but also a means for accomplishing major tasks like
+                        moving to a new house or office, attend special events like weddings, birthdays, making your guests feel
+                        comfortable or to simply enjoy quality time with loved ones.</p>
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <!-- <div class="btn-lg-square bg-primary rounded-circle">
+                                    <i class="fa fa-check text-white"></i>
+                                </div> -->
+                                <div class="ms-4">
+                                    <p class="mb-0">Quality</p>
+                                    <h5 class="mb-0">Services</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <!-- <div class="btn-lg-square bg-primary rounded-circle">
+                                    <i class="fa fa-user-check text-white"></i>
+                                </div> -->
+                                <div class="ms-4">
+                                    <p class="mb-0">Expert</p>
+                                    <h5 class="mb-0">Workers</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <!-- <div class="btn-lg-square bg-primary rounded-circle">
+                                    <i class="fa fa-drafting-compass text-white"></i>
+                                </div> -->
+                                <div class="ms-4">
+                                    <p class="mb-0">Successful</p>
+                                    <h5 class="mb-0">Delivery</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <!-- <div class="btn-lg-square bg-primary rounded-circle">
+                                    <i class="fa fa-headphones text-white"></i>
+                                </div> -->
+                                <div class="ms-4">
+                                    <p class="mb-0">Customer</p>
+                                    <h5 class="mb-0">Support</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/banner-right.png" style="object-fit: cover;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+    
+
+    <!-- Services Start -->
+    <div id="service">
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <h1 class="display-1 text-primary text-center">02</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Our Services</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="service-item d-flex flex-column justify-content-center px-4 mb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-primary ml-n4" style="width: 80px; height: 80px;">
+                                <i class="fa fa-2x fa-taxi text-secondary"></i>
+                            </div>
+                            <h1 class="display-2 text-white mt-n2 m-0">01</h1>
+                        </div>
+                        <h4 class="text-uppercase mb-3">Car Rental</h4>
+                        <p class="m-0">Explore the city at your pace with our diverse fleet of well-maintained cars for rent.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="service-item d-flex flex-column justify-content-center px-4 mb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-primary ml-n4" style="width: 80px; height: 80px;">
+                                <i class="fa fa-2x fa-road text-secondary"></i>
+                            </div>
+                            <h1 class="display-2 text-white mt-n2 m-0">02</h1>
+                        </div>
+                        <h4 class="text-uppercase mb-3">Scooty Rental</h4>
+                        <p class="m-0">Zip through urban streets effortlessly on our convenient and eco-friendly scooties.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="service-item d-flex flex-column justify-content-center px-4 mb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-primary ml-n4" style="width: 80px; height: 80px;">
+                                <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
+                            </div>
+                            <h1 class="display-2 text-white mt-n2 m-0">03</h1>
+                        </div>
+                        <h4 class="text-uppercase mb-3">Bike Rental</h4>
+                        <p class="m-0">Embrace adventure with our bike rental services, perfect for exploring scenic routes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="service-item d-flex flex-column justify-content-center px-4 mb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-primary ml-n4" style="width: 80px; height: 80px;">
+                                <i class="fa fa-2x fa-taxi text-secondary"></i>
+                            </div>
+                            <h1 class="display-2 text-white mt-n2 m-0">04</h1>
+                        </div>
+                        <h4 class="text-uppercase mb-3">Cab Services</h4>
+                        <p class="m-0">Enjoy hassle-free transportation with our reliable and comfortable cab services.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="service-item d-flex flex-column justify-content-center px-4 mb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-primary ml-n4" style="width: 80px; height: 80px;">
+                                <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
+                            </div>
+                            <h1 class="display-2 text-white mt-n2 m-0">05</h1>
+                        </div>
+                        <h4 class="text-uppercase mb-3">Complete Packages</h4>
+                        <p class="m-0">Simplify your travel plans with our all-in-one packages, covering all your transportation needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="service-item d-flex flex-column justify-content-center px-4 mb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-primary ml-n4" style="width: 80px; height: 80px;">
+                                <i class="fa fa-2x fa-money-check-alt text-secondary"></i>
+                            </div>
+                            <h1 class="display-2 text-white mt-n2 m-0">06</h1>
+                        </div>
+                        <h4 class="text-uppercase mb-3">Affordable Rates</h4>
+                        <p class="m-0">Experience quality service at budget-friendly prices, making your journey both enjoyable and economical.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Banner Start -->
+    <!-- <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="bg-banner py-5 px-4 text-center">
+                <div class="py-5">
+                    <h1 class="display-1 text-uppercase text-primary mb-4">50% OFF</h1>
+                    <h1 class="text-uppercase text-light mb-4">Special Offer For New Members</h1>
+                    <p class="mb-4">Only for Sunday from 1st Jan to 30th Jan 2045</p>
+                    <a class="btn btn-primary mt-2 py-3 px-5" href="">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Banner End -->
+
+
+    <!-- Rent A Car Start -->
+    <div id="cars">
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <h1 class="display-1 text-primary text-center">03</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Find Your Car</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/ertiga.png" alt="">
+                        <h4 class="text-uppercase mb-4">Maruti Ertiga</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-car text-primary mr-1"></i>
+                                <span>2</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>7 seater</span>
+                            </div>
+                        </div> 
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr (20Km) - 300₹</a>
+                                <a class="dropdown-item" href="#">24 hr (250Km) - 3500₹</a>
+                                <a class="dropdown-item" href="#">24 hr (450Km) - 5000₹</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/xl6.png" alt="">
+                        <h4 class="text-uppercase mb-4">Maruti XL6</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-car text-primary mr-1"></i>
+                                <span>3</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>7 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr (20Km) - 300₹</a>
+                                <a class="dropdown-item" href="#">24 hr (250Km) - 3500₹</a>
+                                <a class="dropdown-item" href="#">24 hr (450Km) - 5000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/hexa.png" alt="">
+                        <h4 class="text-uppercase mb-4">Tata Hexa</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-car text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>7 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr (20Km) - 300₹</a>
+                                <a class="dropdown-item" href="#">24 hr (250Km) - 3500₹</a>
+                                <a class="dropdown-item" href="#">24 hr (450Km) - 5000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/xuv500.png" alt="">
+                        <h4 class="text-uppercase mb-4">Mahindra XUV 500</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-car text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>7 seater </span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr (20Km) - 300₹</a>
+                                <a class="dropdown-item" href="#">24 hr (250Km) - 3500₹</a>
+                                <a class="dropdown-item" href="#">24 hr (450Km) - 5000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/innova.png" alt="">
+                        <h4 class="text-uppercase mb-4">Toyota Innova</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-car text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>7 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr (20Km) - 300₹</a>
+                                <a class="dropdown-item" href="#">24 hr (250Km) - 3500₹</a>
+                                <a class="dropdown-item" href="#">24 hr (450Km) - 5000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="col-lg-4 col-md-6 mb-2">
+                        <div class="rent-item mb-4">
+                            <img class="img-fluid mb-4" src="img/baleno.png" alt="">
+                            <h4 class="text-uppercase mb-4">Maruti Suzuki Baleno</h4>
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="px-2">
+                                    <i class="fa fa-car text-primary mr-1"></i>
+                                    <span>3</span>
+                                </div>
+                                <div class="px-2 border-left border-right">
+                                    <i class="fa fa-cogs text-primary mr-1"></i>
+                                    <span>MANUAL</span>
+                                </div>
+                                <div class="px-2">
+                                    <i class="fa fa-road text-primary mr-1"></i>
+                                    <span>5 seater</span>
+                                </div>
+                            </div>
+                            <div class="dropdown mb-3">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select Duration
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                    <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                    <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                    <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-lg-4 col-md-6 mb-2">
+                            <div class="rent-item mb-4">
+                                <img class="img-fluid mb-4" src="img/ignis.png" alt="">
+                                <h4 class="text-uppercase mb-4">Maruti Ignis</h4>
+                                <div class="d-flex justify-content-center mb-4">
+                                    <div class="px-2">
+                                        <i class="fa fa-car text-primary mr-1"></i>
+                                        <span>1</span>
+                                    </div>
+                                    <div class="px-2 border-left border-right">
+                                        <i class="fa fa-cogs text-primary mr-1"></i>
+                                        <span>MANUAL</span>
+                                    </div>
+                                    <div class="px-2">
+                                        <i class="fa fa-road text-primary mr-1"></i>
+                                        <span>5 seater</span>
+                                    </div>
+                                </div>
+                                <div class="dropdown mb-3">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Select Duration
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                        <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                        <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                        <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-lg-4 col-md-6 mb-2">
+                                <div class="rent-item mb-4">
+                                    <img class="img-fluid mb-4" src="img/nexon.png" alt="">
+                                    <h4 class="text-uppercase mb-4">Tata Nexon</h4>
+                                    <div class="d-flex justify-content-center mb-4">
+                                        <div class="px-2">
+                                            <i class="fa fa-car text-primary mr-1"></i>
+                                            <span>1</span>
+                                        </div>
+                                        <div class="px-2 border-left border-right">
+                                            <i class="fa fa-cogs text-primary mr-1"></i>
+                                            <span>MANUAL</span>
+                                        </div>
+                                        <div class="px-2">
+                                            <i class="fa fa-road text-primary mr-1"></i>
+                                            <span>5 seater</span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown mb-3">
+                                        <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Select Duration
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                            <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                            <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                            <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="col-lg-4 col-md-6 mb-2">
+                                    <div class="rent-item mb-4">
+                                        <img class="img-fluid mb-4" src="img/figo.png" alt="">
+                                        <h4 class="text-uppercase mb-4">Ford Figo</h4>
+                                        <div class="d-flex justify-content-center mb-4">
+                                            <div class="px-2">
+                                                <i class="fa fa-car text-primary mr-1"></i>
+                                                <span>1</span>
+                                            </div>
+                                            <div class="px-2 border-left border-right">
+                                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                                <span>MANUAL</span>
+                                            </div>
+                                            <div class="px-2">
+                                                <i class="fa fa-road text-primary mr-1"></i>
+                                                <span>5 seater</span>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown mb-3">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Select Duration
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                                <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                                <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                                <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="col-lg-4 col-md-6 mb-2">
+                                        <div class="rent-item mb-4">
+                                            <img class="img-fluid mb-4" src="img/exter.png" alt="">
+                                            <h4 class="text-uppercase mb-4">Hyundai Exter</h4>
+                                            <div class="d-flex justify-content-center mb-4">
+                                                <div class="px-2">
+                                                    <i class="fa fa-car text-primary mr-1"></i>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="px-2 border-left border-right">
+                                                    <i class="fa fa-cogs text-primary mr-1"></i>
+                                                    <span>MANUAL</span>
+                                                </div>
+                                                <div class="px-2">
+                                                    <i class="fa fa-road text-primary mr-1"></i>
+                                                    <span>5 seater</span>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown mb-3">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Select Duration
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                                    <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-2">
+                                        <div class="rent-item mb-4">
+                                            <img class="img-fluid mb-4" src="img/swift.png" alt="">
+                                            <h4 class="text-uppercase mb-4">Maruti Swift</h4>
+                                            <div class="d-flex justify-content-center mb-4">
+                                                <div class="px-2">
+                                                    <i class="fa fa-car text-primary mr-1"></i>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="px-2 border-left border-right">
+                                                    <i class="fa fa-cogs text-primary mr-1"></i>
+                                                    <span>MANUAL</span>
+                                                </div>
+                                                <div class="px-2">
+                                                    <i class="fa fa-road text-primary mr-1"></i>
+                                                    <span>5 seater</span>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown mb-3">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Select Duration
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                                    <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-2">
+                                        <div class="rent-item mb-4">
+                                            <img class="img-fluid mb-4" src="img/alteros.png" alt="">
+                                            <h4 class="text-uppercase mb-4">Tata Alteros</h4>
+                                            <div class="d-flex justify-content-center mb-4">
+                                                <div class="px-2">
+                                                    <i class="fa fa-car text-primary mr-1"></i>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="px-2 border-left border-right">
+                                                    <i class="fa fa-cogs text-primary mr-1"></i>
+                                                    <span>MANUAL</span>
+                                                </div>
+                                                <div class="px-2">
+                                                    <i class="fa fa-road text-primary mr-1"></i>
+                                                    <span>5 seater</span>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown mb-3">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Select Duration
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                                    <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-2">
+                                        <div class="rent-item mb-4">
+                                            <img class="img-fluid mb-4" src="img/kwid.png" alt="">
+                                            <h4 class="text-uppercase mb-4">Renault Kwid</h4>
+                                            <div class="d-flex justify-content-center mb-4">
+                                                <div class="px-2">
+                                                    <i class="fa fa-car text-primary mr-1"></i>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="px-2 border-left border-right">
+                                                    <i class="fa fa-cogs text-primary mr-1"></i>
+                                                    <span>MANUAL</span>
+                                                </div>
+                                                <div class="px-2">
+                                                    <i class="fa fa-road text-primary mr-1"></i>
+                                                    <span>5 seater</span>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown mb-3">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Select Duration
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                                    <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-2">
+                                        <div class="rent-item mb-4">
+                                            <img class="img-fluid mb-4" src="img/celerio.png" alt="">
+                                            <h4 class="text-uppercase mb-4">Maruti Celerio</h4>
+                                            <div class="d-flex justify-content-center mb-4">
+                                                <div class="px-2">
+                                                    <i class="fa fa-car text-primary mr-1"></i>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="px-2 border-left border-right">
+                                                    <i class="fa fa-cogs text-primary mr-1"></i>
+                                                    <span>MANUAL</span>
+                                                </div>
+                                                <div class="px-2">
+                                                    <i class="fa fa-road text-primary mr-1"></i>
+                                                    <span>5 seater</span>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown mb-3">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Select Duration
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                                    <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-2">
+                                        <div class="rent-item mb-4">
+                                            <img class="img-fluid mb-4" src="img/maginte.png" alt="">
+                                            <h4 class="text-uppercase mb-4">Nissan Maginte</h4>
+                                            <div class="d-flex justify-content-center mb-4">
+                                                <div class="px-2">
+                                                    <i class="fa fa-car text-primary mr-1"></i>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="px-2 border-left border-right">
+                                                    <i class="fa fa-cogs text-primary mr-1"></i>
+                                                    <span>MANUAL</span>
+                                                </div>
+                                                <div class="px-2">
+                                                    <i class="fa fa-road text-primary mr-1"></i>
+                                                    <span>5 seater</span>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown mb-3">
+                                                <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Select Duration
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                                    <a class="dropdown-item" href="#">1 hr (20Km) - 250₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (250Km) - 2500₹</a>
+                                                    <a class="dropdown-item" href="#">24 hr (450Km) - 3500₹</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Rent A Car End -->
+
+
+    <!-- Rent A Bike-->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <h1 class="display-4 text-uppercase text-center mb-5">Find Your Bike</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/Scooter.jpeg" alt="">
+                        <h4 class="text-uppercase mb-4">Scooter</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-motorcycle text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>2 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr - 50₹</a>
+                                <a class="dropdown-item" href="#">24 hr - 500₹</a>
+                                <a class="dropdown-item" href="#">1 Week - 2000₹</a>
+                                <a class="dropdown-item" href="#">1 Month - 6000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/jupiter.png" alt="">
+                        <h4 class="text-uppercase mb-4">Jupiter 125</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-motorcycle text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>2 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr - 50₹</a>
+                                <a class="dropdown-item" href="#">24 hr - 500₹</a>
+                                <a class="dropdown-item" href="#">1 Week - 2000₹</a>
+                                <a class="dropdown-item" href="#">1 Month - 6000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/activa.jpeg" alt="">
+                        <h4 class="text-uppercase mb-4">Honda Activa</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-motorcycle text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>2 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr - 50₹</a>
+                                <a class="dropdown-item" href="#">24 hr - 500₹</a>
+                                <a class="dropdown-item" href="#">1 Week - 2000₹</a>
+                                <a class="dropdown-item" href="#">1 Month - 6000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/ola.png" alt="">
+                        <h4 class="text-uppercase mb-4">Ola Electric Bike</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-motorcycle text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>2 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr - 80₹</a>
+                                <a class="dropdown-item" href="#">24 hr - 800₹</a>
+                                <a class="dropdown-item" href="#">1 Week - 3000₹</a>
+                                <a class="dropdown-item" href="#">1 Month - 10000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/bullet.png" alt="">
+                        <h4 class="text-uppercase mb-4">Royal Enfield</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-motorcycle text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>2 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr - 100₹</a>
+                                <a class="dropdown-item" href="#">24 hr - 1000₹</a>
+                                <a class="dropdown-item" href="#">1 Week - 5000₹</a>
+                                <a class="dropdown-item" href="#">1 Month - 15000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/r15.jpeg" alt="">
+                        <h4 class="text-uppercase mb-4">Yamaha R15</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-motorcycle text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>2 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr - 100₹</a>
+                                <a class="dropdown-item" href="#">24 hr - 1000₹</a>
+                                <a class="dropdown-item" href="#">1 Week - 5000₹</a>
+                                <a class="dropdown-item" href="#">1 Month - 15000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-2">
+                    <div class="rent-item mb-4">
+                        <img class="img-fluid mb-4" src="img/duke.jpeg" alt="">
+                        <h4 class="text-uppercase mb-4">KTM Duke 200</h4>
+                        <div class="d-flex justify-content-center mb-4">
+                            <div class="px-2">
+                                <i class="fa fa-motorcycle text-primary mr-1"></i>
+                                <span>1</span>
+                            </div>
+                            <div class="px-2 border-left border-right">
+                                <i class="fa fa-cogs text-primary mr-1"></i>
+                                <span>MANUAL</span>
+                            </div>
+                            <div class="px-2">
+                                <i class="fa fa-road text-primary mr-1"></i>
+                                <span>2 seater</span>
+                            </div>
+                        </div>
+                        <div class="dropdown mb-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="pricingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Duration
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                                <a class="dropdown-item" href="#">1 hr - 100₹</a>
+                                <a class="dropdown-item" href="#">24 hr - 1000₹</a>
+                                <a class="dropdown-item" href="#">1 Week - 5000₹</a>
+                                <a class="dropdown-item" href="#">1 Month - 15000₹</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Rent A Car End -->
+
+
+    <!-- Team Start -->
+    <!-- <div class="container-fluid py-5">
+        <div class="container py-5">
+            <h1 class="display-1 text-primary text-center">04</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Meet Our Team</h1>
+            <div class="owl-carousel team-carousel position-relative" style="padding: 0 30px;">
+                <div class="team-item">
+                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                    <div class="position-relative py-4">
+                        <h4 class="text-uppercase">Full Name</h4>
+                        <p class="m-0">Designation</p>
+                        <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                    <div class="position-relative py-4">
+                        <h4 class="text-uppercase">Full Name</h4>
+                        <p class="m-0">Designation</p>
+                        <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                    <div class="position-relative py-4">
+                        <h4 class="text-uppercase">Full Name</h4>
+                        <p class="m-0">Designation</p>
+                        <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                    <div class="position-relative py-4">
+                        <h4 class="text-uppercase">Full Name</h4>
+                        <p class="m-0">Designation</p>
+                        <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+
+
+    <!-- Banner Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row mx-0">
+                <div class="col-lg-6 px-0">
+                    <div class="px-5 bg-secondary d-flex align-items-center justify-content-between" style="height: 350px;">
+                        <img class="img-fluid flex-shrink-0 ml-n5 w-50 mr-4" src="img/banner-left.png" alt="">
+                        <div class="text-right">
+                            <h3 class="text-uppercase text-light mb-3">Looking for a driver?</h3>
+                            <p class="mb-4">We Provode driver cab services too in package deal!</p>
+                            <a class="btn btn-primary py-2 px-4" href="">Hire Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0">
+                    <div class="px-5 bg-dark d-flex align-items-center justify-content-between" style="height: 350px;">
+                        <div class="text-left">
+                            <h3 class="text-uppercase text-light mb-3">Hire a Driver</h3>
+                            <p class="mb-4">Choose from our convenient driver packages</p>
+                            <ul class="text-light">
+                                <li>3 hrs: 450 ₹</li>
+                                <li>Additional 1 hr: ₹ 80</li>
+                                <li>1 day (24 hrs): ₹ 2000</li>
+                            </ul>
+                            <p class="mt-3">Driver charges are applicable for the specified durations.</p>
+                        </div>
+                        <img class="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="img/banner-right.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+
+
+
+    <!-- Contact Start -->
+    <div id="contact"></div>
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <h1 class="display-1 text-primary text-center">04</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Contact Us</h1>
+            <div class="row">
+                <div class="col-lg-7 mb-2">
+                    <iframe
+        width="100%"
+        height="400"
+        frameborder="0"
+        style="border: 0"
+        src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.3719345458585!2d80.02648027485161!3d12.81922558748236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2554d2c47a5bff95%3A0xa6b04dadd311aa25!2sCAR%202%20GO!5e0!3m2!1sen!2sin!4v1706867360192!5m2!1sen!2sin "
+        allowfullscreen
+    ></iframe>
+                </div>
+               
+                <div class="col-lg-5 mb-2">
+                    <div class="bg-secondary d-flex flex-column justify-content-center px-5 mb-4" style="height: 435px;">
+                        
+                        <div class="d-flex mb-3">
+                            <i class="fa fa-2x fa-map-marker-alt text-primary flex-shrink-0 mr-3"></i>
+                            <div class="mt-n1">
+                                <h5 class="text-light">Head Office</h5>
+                                <p>Illam, Bagavathy Street, Potheri, Vivekananda Nagar, Tamil Nadu 603203</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fa fa-2x fa-user-check text-primary flex-shrink-0 mr-3"></i>
+                            <div class="mt-n1">
+                                <h5 class="text-light">Our Leaders</h5>
+                                <p> Mr. V Suresh <br>Mr. R karthickeyan<br></p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fa fa-2x fa-envelope-open text-primary flex-shrink-0 mr-3"></i>
+                            <div class="mt-n1">
+                                <h5 class="text-light">Customer Service</h5>
+                                <p>car2go.potheri@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fa fa-2x fa-phone-alt text-primary flex-shrink-0 mr-3"></i>
+                            <div class="mt-n1">
+                                <h5 class="text-light">Call Us</h5>
+                                <p class="mb-2"><i class="fab fa-whatsapp text-white mr-3"></i>+91 9043054267</p>
+                                <p class="m-0"> +91 9043074267</p>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <h1 class="display-1 text-primary text-center">05</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Our Client's Say</h1>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item d-flex flex-column justify-content-center px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <img class="img-fluid ml-n4" src="img/1.png" alt="">
+                        <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
+                    </div>
+                    <h4 class="text-uppercase mb-2">Divya Kumar</h4>
+                    <i class="mb-2">User</i>
+                    <p class="m-0">Experience was great traveling with this Car To Go service rental. The rates were affordable. Best rental price, overall experience was also awesome.</p>
+                </div>
+                <div class="testimonial-item d-flex flex-column justify-content-center px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <img class="img-fluid ml-n4" src="img/2.png" alt="">
+                        <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
+                    </div>
+                    <h4 class="text-uppercase mb-2">Gugan Kumar</h4>
+                    <i class="mb-2">User</i>
+                    <p class="m-0">value for money given the best car rental company in potheri our familes are enjoy the trip thanks to car 2 go</p>
+                </div>
+                <div class="testimonial-item d-flex flex-column justify-content-center px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <img class="img-fluid ml-n4" src="img/3.png" alt="">
+                        <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
+                    </div>
+                    <h4 class="text-uppercase mb-2">Sugapriya surendhar</h4>
+                    <i class="mb-2">User</i>
+                    <p class="m-0">Best rental price ever seen..
+                    </p>
+                </div>
+                <div class="testimonial-item d-flex flex-column justify-content-center px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <img class="img-fluid ml-n4" src="img/4.png" alt="">
+                        <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
+                    </div>
+                    <h4 class="text-uppercase mb-2">Aryan Kumar Singh</h4>
+                    <i class="mb-2">User</i>
+                    <p class="m-0">Nice place for rental service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="owl-carousel vendor-carousel">
+                <div class="bg-light p-4">
+                    <img src="img/maruti.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/tata.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/mahindra.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/toyota.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/ford.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/olalogo.png" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/suzuki.jpeg" alt="">
+                </div>
+                <div class="bg-light p-4">
+                    <img src="img/renaul.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>Shivahari Illam, Bagavathy Street, Potheri, Vivekananda Nagar, Tamil Nadu 603203</p>
+                <p class="mb-2"><i class="fab fa-whatsapp text-white mr-3"></i>+91 9043054267</p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>+91 9043074267</p>
+                
+                <p><i class="fa fa-envelope text-white mr-3"></i>car2go.potheri@gmail.com</p>
+                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://www.facebook.com/profile.php?id=61555666516975"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square" href="https://www.instagram.com/car2go.potheri/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Usefull Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
+                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
+                    <a class="text-body" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Car Gallery</h4>
+                <div class="row mx-n1">
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/baleno.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/ertiga.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/exter.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/xuv500.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/hexa.png" alt=""></a>
+                    </div>
+                    <div class="col-4 px-1 mb-2">
+                        <a href=""><img class="w-100" src="img/ola.png" alt=""></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-light mb-4">Contact Developer</h4>
+                <p class="mb-4">If there are any development issues or queries you can contact the developer below:</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i><a href="https://shivanshdengla.github.io/">shivanshdengla.github.io</a></p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>+91 9043054267</p>
+                <p><i class="fa fa-envelope text-white mr-3"></i>shivanshdengla@gmail.com</p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
+        <p class="mb-2 text-center text-body">&copy; <a href="#">Car2Go</a>. All Rights Reserved.</p>
+		
+		<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->					
+        <p class="m-0 text-center text-body">Developed by <a href="https://shivanshdengla.github.io/">Shivansh Dengla</a></p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#carDropdown').on('change', function() {
+                var selectedCarText = $(this).find('option:selected').text();
+                $('#selectedCarInput').val(selectedCarText);
+            });
+        });
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxfTe_t73OC7bTsVx3OHNdJ1hpQTiLDzzQRy2qTedjQzc44xmtgiiKV93xMfjXW964a/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+<!-- Add this script at the end of your HTML or in the <head> section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('carSearchForm');
+            const submitBtn = document.getElementById('submitBtn');
+    
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevents the default form submission behavior
+    
+                // Here you can add your logic to send the booking request to the server if needed
+    
+                // Show the success modal
+                showSuccessModal();
+    
+                // Reset the form
+                form.reset();
+            });
+    
+            function showSuccessModal() {
+                // You can customize the modal content/style as needed
+                alert('Booking Request Sent Successfully!');
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
