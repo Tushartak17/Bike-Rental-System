@@ -4,7 +4,7 @@ This is a bike and car rental website built using HTML, CSS, SCSS, and integrate
 
 ## Live Demo
 
-You can view a live demo of the website [here](https://tushartak17.github.io/Bike-Rental-System/#contact).
+You can view a live demo of the website [here](https://tushartak17.github.io/Bike-Rental-System/)
 
 ## Table of Contents
 
