@@ -2,6 +2,10 @@
 
 This is a bike and car rental website built using HTML, CSS, SCSS, and integrated with Google Maps APIs. It includes a form where customers can fill out rental requests for bikes.
 
+## Live Demo
+
+You can view a live demo of the website [here](https://tushartak17.github.io/Bike-Rental-System/#contact).
+
 ## Table of Contents
 
 - [Introduction](#introduction)
