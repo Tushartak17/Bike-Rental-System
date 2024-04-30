@@ -75,5 +75,5 @@ This project is licensed under the MIT License.
 
 mail for setup: 
 
-tushattak17@gmail.com
-jansh7784@gmail.com
+-tushattak17@gmail.com
+-jansh7784@gmail.com
